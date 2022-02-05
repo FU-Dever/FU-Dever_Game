@@ -103,89 +103,19 @@ export default function UserInterface() {
           {vans.map((van) => {
             if (van[1].isOpenning) {
               return (
-                <div id={van[0]}>
-                  <h3>Mã ván: {van[0]}</h3>
-                  <div id="wrap-options">
-                    <div className="option">
-                      <img src="./assets/images/deer.png" alt="option" />
-                    </div>
-                    <div className="option">
-                      <img src="./assets/images/crab.jpg" alt="option" />
-                    </div>
-                    <div className="option">
-                      <img src="./assets/images/fish.png" alt="option" />
-                    </div>
-                    <div className="option">
-                      <img src="./assets/images/shrimp.png" alt="option" />
-                    </div>
-                    <div className="option">
-                      <img src="./assets/images/cook.png" alt="option" />
-                    </div>
-                    <div className="option">
-                      <img src="./assets/images/calabash.png" alt="option" />
-                    </div>
-                  </div>
-                  <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        placeholder="Nai"
-                        onChange={(e) => checkChoices(e, 0)}
-                      />
-                      <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        placeholder="Cua"
-                        onChange={(e) => checkChoices(e, 1)}
-                      />
-                       <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        placeholder="Cá"
-                        onChange={(e) => checkChoices(e, 2)}
-                      />
-                       <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        placeholder="Tôm"
-                        onChange={(e) => checkChoices(e, 3)}
-                      />
-                       <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        placeholder="Gà"
-                        onChange={(e) => checkChoices(e, 4)}
-                      />
-                       <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        placeholder="Hồ lô"
-                        onChange={(e) => checkChoices(e, 5)}
-                      />
-                  <button onClick={() => cocAction(van[0])}>Cọc</button>
-                </div>
-              );
-            }
-          })}
-          <div className="coc-option">
+                <>
                   <div style={{
                     margin:'0.5cm 0',
                     textAlign:'center',
                     color:'white',
                     fontSize:'20px'
-                  }}>Mã ván: jdh-sjd-jsd</div>
+                  }}>Mã ván: {van[0]}</div>
                   <div id="wrap-options" className="user-coc">
                     <div className="option">
                       <img src="./assets/images/deer.png" alt="option" />
                     </div>
                     <div className="option">
                       <img src="./assets/images/crab.jpg" alt="option" />
-                      
                     </div>
                     <div className="option">
                       <img src="./assets/images/fish.png" alt="option" />
@@ -256,13 +186,16 @@ export default function UserInterface() {
                       />
                       </div>
                   </div>
-                  <button className="btn" style={{
+                       <button className="btn" style={{
                     marginLeft:'50%',
                     transform:'translateX(-50%)',
                     marginTop:'1cm',
                     background:'transparent'
                   }}>Cọc</button>
-          </div>
+                </>
+              );
+            }
+          })}
         </>
       ) : (
         <>
