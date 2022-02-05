@@ -108,124 +108,161 @@ export default function UserInterface() {
                   <div id="wrap-options">
                     <div className="option">
                       <img src="./assets/images/deer.png" alt="option" />
-                      <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        onChange={(e) => checkChoices(e, 0)}
-                      />
                     </div>
                     <div className="option">
                       <img src="./assets/images/crab.jpg" alt="option" />
-                      <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        onChange={(e) => checkChoices(e, 1)}
-                      />
                     </div>
                     <div className="option">
                       <img src="./assets/images/fish.png" alt="option" />
-                      <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        onChange={(e) => checkChoices(e, 2)}
-                      />
                     </div>
                     <div className="option">
                       <img src="./assets/images/shrimp.png" alt="option" />
-                      <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        onChange={(e) => checkChoices(e, 3)}
-                      />
                     </div>
                     <div className="option">
                       <img src="./assets/images/cook.png" alt="option" />
-                      <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        onChange={(e) => checkChoices(e, 4)}
-                      />
                     </div>
                     <div className="option">
                       <img src="./assets/images/calabash.png" alt="option" />
+                    </div>
+                  </div>
+                  <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        placeholder="Nai"
+                        onChange={(e) => checkChoices(e, 0)}
+                      />
                       <input
                         type="number"
                         min="0"
                         max={user.money}
+                        placeholder="Cua"
+                        onChange={(e) => checkChoices(e, 1)}
+                      />
+                       <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        placeholder="Cá"
+                        onChange={(e) => checkChoices(e, 2)}
+                      />
+                       <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        placeholder="Tôm"
+                        onChange={(e) => checkChoices(e, 3)}
+                      />
+                       <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        placeholder="Gà"
+                        onChange={(e) => checkChoices(e, 4)}
+                      />
+                       <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        placeholder="Hồ lô"
                         onChange={(e) => checkChoices(e, 5)}
                       />
-                    </div>
-                  </div>
                   <button onClick={() => cocAction(van[0])}>Cọc</button>
                 </div>
               );
             }
           })}
-          <>
-          <h3>Mã ván: jdh-sjd-jsd</h3>
-                  <div id="wrap-options">
+          <div className="coc-option">
+                  <div style={{
+                    margin:'0.5cm 0',
+                    textAlign:'center',
+                    color:'white',
+                    fontSize:'20px'
+                  }}>Mã ván: jdh-sjd-jsd</div>
+                  <div id="wrap-options" className="user-coc">
                     <div className="option">
                       <img src="./assets/images/deer.png" alt="option" />
-                      <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        onChange={(e) => checkChoices(e, 0)}
-                      />
                     </div>
                     <div className="option">
                       <img src="./assets/images/crab.jpg" alt="option" />
-                      <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        onChange={(e) => checkChoices(e, 1)}
-                      />
+                      
                     </div>
                     <div className="option">
                       <img src="./assets/images/fish.png" alt="option" />
-                      <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        onChange={(e) => checkChoices(e, 2)}
-                      />
                     </div>
                     <div className="option">
-                      <img src="./assets/images/shrimp.png" alt="option" />
                       <input
                         type="number"
                         min="0"
                         max={user.money}
-                        onChange={(e) => checkChoices(e, 3)}
+                        placeholder="Nai"
+                        onChange={(e) => checkChoices(e, 0)}
                       />
+                      </div>
+                      <div className="option">
+                      <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        placeholder="Cua"
+                        onChange={(e) => checkChoices(e, 1)}
+                      />
+                      </div>
+                      <div className="option">
+                       <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        placeholder="Cá"
+                        onChange={(e) => checkChoices(e, 2)}
+                      />
+                      </div>
+                    <div className="option">
+                      <img src="./assets/images/shrimp.png" alt="option" />
+                     
                     </div>
                     <div className="option">
                       <img src="./assets/images/cook.png" alt="option" />
-                      <input
-                        type="number"
-                        min="0"
-                        max={user.money}
-                        onChange={(e) => checkChoices(e, 4)}
-                      />
                     </div>
                     <div className="option">
                       <img src="./assets/images/calabash.png" alt="option" />
+                    </div>
+                    
+                      <div className="option">
                       <input
                         type="number"
                         min="0"
                         max={user.money}
+                        placeholder="Tôm"
+                        onChange={(e) => checkChoices(e, 3)}
+                      />
+                      </div>
+                      <div className="option">
+                      <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        placeholder="Gà"
+                        onChange={(e) => checkChoices(e, 4)}
+                      />
+                      </div>
+                      <div className="option">
+                      <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        placeholder="Hồ lô"
                         onChange={(e) => checkChoices(e, 5)}
                       />
-                    </div>
+                      </div>
                   </div>
-                  <button>Cọc</button>
-          </>
+                  <button className="btn" style={{
+                    marginLeft:'50%',
+                    transform:'translateX(-50%)',
+                    marginTop:'1cm',
+                    background:'transparent'
+                  }}>Cọc</button>
+          </div>
         </>
       ) : (
         <>
