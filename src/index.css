@@ -1,4 +1,5 @@
 @import url("./theme.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 body {
   margin: 0;
@@ -19,34 +20,59 @@ code {
   position: relative;
 }
 
-#title-app{
-  padding-top: 60px;
+.primary-title {
+  padding-top: 20px;
   text-align: center;
   color: #fff;
-  font-size: 32px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.secondary-title{
+  padding-top: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+.host-name{
+  font-family: 'Courgette', cursive;
+  font-size: 60px !important;
+  animation: colorhightlight 0.5s ease-in-out infinite;
+}
+@keyframes colorhightlight{
+  25%{
+    color:white;
+  }
+  50%{
+    color:yellow;
+    text-shadow: 0px 0px 5px 5px yellow, inset 0px 0px 2px 2px yellow;
+  }
 }
 .option{
-  width: 160px;
-  height: 160px;
+  height: 10px;
+  max-width: 200px;
 }
 .option img{
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  object-fit:cover;
+}
+.option input{
 }
 #wrap-content{
   display: flex;
   justify-content: space-between;
-  margin: 50px 40px 0px 40px;
   position: relative;
+  flex-wrap: wrap;
+  justify-content:center;
+  padding:1cm 1cm;
 }
 #wrap-options{
-  width: 540px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   row-gap: 20px;
   column-gap: 20px;
-  padding: 30px;
+  padding: 30px 15px;
   border-radius: 10px;
   width: fit-content;
   border: 3px solid var(--primary-yellow);
@@ -103,6 +129,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom:30px;
 }
 #top-player-title{
   margin: 0px;
@@ -117,11 +144,11 @@ code {
   margin-top: 50px;
 }
 .btn{
-  width: 160px;
-  height: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding:10px 15px;
+  width:fit-content;
   line-height: 22px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   text-align: center;
   margin: 0px 20px;
   border: 3px solid var(--primary-yellow);
@@ -145,14 +172,16 @@ code {
   display: flex;
   margin-bottom: 15px;
 }
+.player .name{
+  font-weight: bold;
+  color:yellow;
+}
 .player-infor{
   display: flex;
-  height:32px;
   border-radius: 32px;
+  padding:10px 25px;
   border: 1px solid yellow;
   position: relative;
-  padding-left: 40px;
-  padding-right: 20px;
   line-height: 32px;
   color: #fff;
 }
@@ -242,4 +271,24 @@ code {
   position: absolute !important;
   z-index: -1 !important;
   opacity: 0 !important;
+}
+.user-infor{
+  margin-top:10px;
+  color:white;
+  text-align: center;
+  font-size:25px;
+  padding:10px 0;
+  border:2px solid white;
+  width:75vw;
+  margin-left:12.5vw;
+  animation: borderhightlight 0.5s ease-in-out infinite;
+}
+@keyframes borderhightlight {
+  25%{
+    box-shadow: 0px 0px 5px 5px yellow, inset 0px 0px 2px 2px yellow;
+  }
+  50%{
+    box-shadow: 0px 0px 5px 5px rgb(255, 255, 0), inset 0px 0px 2px 2px rgb(250, 250, 42);
+  }
+  
 }

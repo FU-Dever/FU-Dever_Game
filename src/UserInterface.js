@@ -96,9 +96,9 @@ export default function UserInterface() {
     <div>
       {user !== undefined ? (
         <>
-          <div>
-            <h3>Username: {user?.username}</h3>
-            <h3>Money: {user?.money}</h3>
+          <div className="user-infor">
+            <h3>Username:   {user?.username}</h3>
+            <h3>Money:    {user?.money}$</h3>
           </div>
           {vans.map((van) => {
             if (van[1].isOpenning) {
@@ -166,10 +166,70 @@ export default function UserInterface() {
               );
             }
           })}
+          <>
+          <h3>Mã ván: jdh-sjd-jsd</h3>
+                  <div id="wrap-options">
+                    <div className="option">
+                      <img src="./assets/images/deer.png" alt="option" />
+                      <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        onChange={(e) => checkChoices(e, 0)}
+                      />
+                    </div>
+                    <div className="option">
+                      <img src="./assets/images/crab.jpg" alt="option" />
+                      <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        onChange={(e) => checkChoices(e, 1)}
+                      />
+                    </div>
+                    <div className="option">
+                      <img src="./assets/images/fish.png" alt="option" />
+                      <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        onChange={(e) => checkChoices(e, 2)}
+                      />
+                    </div>
+                    <div className="option">
+                      <img src="./assets/images/shrimp.png" alt="option" />
+                      <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        onChange={(e) => checkChoices(e, 3)}
+                      />
+                    </div>
+                    <div className="option">
+                      <img src="./assets/images/cook.png" alt="option" />
+                      <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        onChange={(e) => checkChoices(e, 4)}
+                      />
+                    </div>
+                    <div className="option">
+                      <img src="./assets/images/calabash.png" alt="option" />
+                      <input
+                        type="number"
+                        min="0"
+                        max={user.money}
+                        onChange={(e) => checkChoices(e, 5)}
+                      />
+                    </div>
+                  </div>
+                  <button>Cọc</button>
+          </>
         </>
       ) : (
         <>
-          <div>
+          <div className="login-container">
             <div className="img-wrap">
               <img src={require("../src/assets/images/bct.png")} alt="" />
             </div>
@@ -182,8 +242,8 @@ export default function UserInterface() {
               <label for="uname">
                 <b>Key login</b>
               </label>
-              <input type="text" id="password" placeholder="Key Log" />
-              <button class="button" onClick={registerUser}>
+              <input type="password" id="password" placeholder="Key Log" />
+              <button className="button" onClick={registerUser}>
                 Play now
               </button>
             </div>

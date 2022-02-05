@@ -26,7 +26,6 @@ export default class App extends React.Component {
       let optionIndex3 = Math.floor(Math.random() * 5);
 
       let optionIndex = [optionIndex1, optionIndex2, optionIndex3];
-      alert(optionIndex)
       this.setState({
         optionIndex: optionIndex,
         popUpOpen: true,
@@ -100,10 +99,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div className=".App">
-        <div id="title-app">FU-DEVER BẦU CUA</div>
-        <div id="title-app">Mã Ván: {this.state.uid}</div>
-        <div id="title-app">Đã có: {this.state.numberUsers} người cọc</div>
-        {this.state.uid}
+        <div className="host-name primary-title">FU-DEVER</div>
+        <div className="primary-title">BẦU CUA</div>
+        <div className="secondary-title">Mã Ván: {this.state.uid}</div>
+        <div className="secondary-title">Đã có: {this.state.numberUsers} người cọc</div>
         <div id="wrap-content">
           <TopPlayer/>
           <Options />

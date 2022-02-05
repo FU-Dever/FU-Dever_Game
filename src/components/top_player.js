@@ -18,8 +18,8 @@ export default function TopPlayer() {
     });
   return (
     <div id="wrap-top-player">
-      <h2 id="top-player-title">Top Rank</h2>
-      <h3 id="top-player-title">Total users: {players.length}</h3>
+      <h2 id="top-player-title">Bảng xếp hạng</h2>
+      <h3 id="top-player-title">Tổng số người chơi: {players.length}</h3>
       {players !== [] &&
         players.map((player) => (
           <Player name={player[0]} score={player[1].money} />
